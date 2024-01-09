@@ -8,7 +8,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "npm run cdk deploy -- --profile hiroshiPersonal",
+    "diff": "npm run cdk diff -- --profile hiroshiPersonal"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
