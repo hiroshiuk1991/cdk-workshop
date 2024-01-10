@@ -6,10 +6,10 @@ export class CdkWorkshopStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const hello = new lambda.Function(this, "HelloHAndler", {
-      runtime: lambda.Runtime.NODEJS_16_X,
-      code: lambda.Code.fromAsset("lambda"),
-      handler: "hello.handler",
+    const hello = new lambda.Function(this, "HelloHandler", {
+      runtime: lambda.Runtime.NODEJS_16_X, // execution environment
+      code: lambda.Code.fromAsset("lambda"), // code loaded from "lambda" directory
+      handler: "hello.handler", // file is "hello", function is "handler"
     });
   }
 }
